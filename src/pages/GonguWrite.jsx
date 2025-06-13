@@ -461,7 +461,7 @@ function GonguWrite(props) {
             >
               {selectedCategory || "카테고리를 선택해주세요."}
               <span>
-                <img src="/arrow-down.svg" alt="" />
+                <img src={import.meta.env.BASE_URL + "/arrow-down.svg"} alt="" />
               </span>
             </CategorySelector>
           </CategoryWrap>

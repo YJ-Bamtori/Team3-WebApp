@@ -198,7 +198,7 @@ const SelectGongu = (props) => {
     <PageWrapper>
       {/* StatusBar */}
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       {/* 헤더 */}
       <TitleHeader

@@ -266,7 +266,7 @@ function ReviewWrite(props) {
   return (
     <StyledReviewWrite>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
 
       {/* 헤더 */}
@@ -282,7 +282,7 @@ function ReviewWrite(props) {
         <GonguTitle>
           <p>{title}</p>
           <span>
-            <img src="/arrow-right.svg" alt="" />
+            <img src={import.meta.env.BASE_URL + "/arrow-right.svg"} alt="" />
           </span>
         </GonguTitle>
         <ReviewItem>
@@ -306,7 +306,7 @@ function ReviewWrite(props) {
               {/* 업로드 버튼 */}
               <UploadBtn onClick={() => fileInputRef.current.click()}>
                 <span className="img-icon">
-                  <img src="/image.svg" alt="" />
+                  <img src={import.meta.env.BASE_URL + "/image.svg"} alt="" />
                 </span>
                 <span className="img-length">
                   {images.length}/{MAX}
@@ -325,7 +325,7 @@ function ReviewWrite(props) {
                 <Thumb key={idx}>
                   <img src={img.src} alt={img.name} />
                   <button onClick={() => handleRemoveImage(idx)}>
-                    <img src="/delete.svg" alt="삭제" />
+                    <img src={import.meta.env.BASE_URL + "/delete.svg"} alt="삭제" />
                   </button>
                 </Thumb>
               ))}

@@ -31,7 +31,7 @@ function ParticipantInfo({ current = 0, total = 0 }) {
   return (
     <Wrapper>
       <Icon>
-        <img src="/participant.svg" alt="" />
+        <img src={import.meta.env.BASE_URL + "/participant.svg"} alt="" />
       </Icon>
       <CountText>
         <Current>{current}</Current>
