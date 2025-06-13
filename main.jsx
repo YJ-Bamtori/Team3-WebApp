@@ -11,7 +11,7 @@ import CommunityPage from "./pages/CommunityPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Team3-WebApp">
     <Routes>
       <Route path="/" element={<MainDashboard />} />
       <Route path="/gongu" element={<GonguListPage />} />
