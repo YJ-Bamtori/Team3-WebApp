@@ -196,7 +196,7 @@ function GonguStateCard({ gongu }) {
         </StatusArea>
         <ParticipantArea>
           <span>
-            <img src="/participant.svg" alt="참여자 아이콘" />
+            <img src={import.meta.env.BASE_URL + "/participant.svg"} alt="참여자 아이콘" />
           </span>
           <span>
             <CurrentCount>{currentParticipants}</CurrentCount>/
@@ -212,7 +212,7 @@ function GonguStateCard({ gongu }) {
         <Title>
           <p>{gongu.title}</p>
           <span>
-            <img src="/arrow-right-18px.svg" alt="이동 아이콘" />
+            <img src={import.meta.env.BASE_URL + "/arrow-right-18px.svg"} alt="이동 아이콘" />
           </span>
         </Title>
       </CardContent>
@@ -228,11 +228,11 @@ function GonguStateCard({ gongu }) {
           style={
             gongu.isReviewed
               ? {
-                  background: "#f3f3f3",
-                  color: "#bcbcbc",
-                  border: "none",
-                  cursor: "not-allowed",
-                }
+                background: "#f3f3f3",
+                color: "#bcbcbc",
+                border: "none",
+                cursor: "not-allowed",
+              }
               : {}
           }
         >

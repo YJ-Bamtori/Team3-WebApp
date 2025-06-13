@@ -95,8 +95,8 @@ const ProgressSteps = ({ currentStep = 0 }) => {
             $active={i === currentStep}
             $completed={i < currentStep}
           >
-            {i === currentStep && <img src="/dot.svg" alt="현재 단계" />}
-            {i < currentStep && <img src="/check.svg" alt="완료됨" />}
+            {i === currentStep && <img src={import.meta.env.BASE_URL + "/dot.svg"} alt="현재 단계" />}
+            {i < currentStep && <img src={import.meta.env.BASE_URL + "/check.svg"} alt="완료됨" />}
           </Step>
         ))}
       </ProgressBarContainer>

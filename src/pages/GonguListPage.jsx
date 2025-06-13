@@ -157,7 +157,7 @@ function GonguListPage() {
   return (
     <PageWrapper>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       <StickyWrap>
         {/* 검색 입력란 */}
@@ -185,7 +185,7 @@ function GonguListPage() {
         gonguList={searchFilteredList}
       />
       <FloatingButton onClick={() => navigate("/gongu/new")}>
-        <img src="/plus.svg" alt="" />
+        <img src={import.meta.env.BASE_URL + "/plus.svg"} alt="" />
       </FloatingButton>
       <BottomNav />
     </PageWrapper>

@@ -436,7 +436,7 @@ function GonguWrite(props) {
   return (
     <StyledGonguWrite>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
 
       {/* 헤더 */}
@@ -488,7 +488,7 @@ function GonguWrite(props) {
               {/* 업로드 버튼 */}
               <UploadBtn onClick={() => fileInputRef.current.click()}>
                 <span className="img-icon">
-                  <img src="/image.svg" alt="" />
+                  <img src={import.meta.env.BASE_URL + "/image.svg"} alt="" />
                 </span>
                 <span className="img-length">
                   {images.length}/{MAX}
@@ -507,7 +507,7 @@ function GonguWrite(props) {
                 <Thumb key={idx}>
                   <img src={img.src} alt={img.name} />
                   <button onClick={() => handleRemoveImage(idx)}>
-                    <img src="/delete.svg" alt="삭제" />
+                    <img src={import.meta.env.BASE_URL + "/delete.svg"} alt="삭제" />
                   </button>
                 </Thumb>
               ))}
@@ -529,7 +529,7 @@ function GonguWrite(props) {
             >
               {deadline || "마감 기한을 선택해주세요"}
               <span>
-                <img src="/calendar.svg" alt="" />
+                <img src={import.meta.env.BASE_URL + "/calendar.svg"} alt="" />
               </span>
             </DeadlineSelector>
           </DeadlineWrap>
@@ -557,7 +557,7 @@ function GonguWrite(props) {
             {/* 1인당 가격 알림 */}
             {perPerson !== null && (
               <PerPersonInfo>
-                <img src="/price.svg" alt="" />
+                <img src={import.meta.env.BASE_URL + "/price.svg"} alt="" />
                 <span>
                   1인당{" "}
                   <PriceHighlight>{perPerson.toLocaleString()}</PriceHighlight>

@@ -178,8 +178,8 @@ const CompleteTag = styled.div`
     props.$progress <= 5
       ? "translateX(0%)"
       : props.$progress >= 95
-      ? "translateX(-100%)"
-      : "translateX(-50%)"};
+        ? "translateX(-100%)"
+        : "translateX(-50%)"};
 
   left: ${(props) => `${props.$progress}%`};
 
@@ -193,9 +193,9 @@ const CompleteTag = styled.div`
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     left: ${(props) =>
-      props.$progress <= 5
-        ? "16px"
-        : props.$progress >= 95
+    props.$progress <= 5
+      ? "16px"
+      : props.$progress >= 95
         ? "calc(100% - 16px)"
         : "50%"};
     transform: translateX(-50%);
@@ -525,7 +525,7 @@ function GonguViewPage() {
   return (
     <DashboardContainer>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       <TitleHeader state="IconActionBar" onClick={handleBack} />
 
@@ -589,8 +589,8 @@ function GonguViewPage() {
                   caption={
                     posts.price && posts.finalnum
                       ? Math.floor(
-                          posts.price / posts.finalnum
-                        ).toLocaleString()
+                        posts.price / posts.finalnum
+                      ).toLocaleString()
                       : posts.price?.toLocaleString()
                   }
                 ></Info>
@@ -651,13 +651,12 @@ function GonguViewPage() {
                           {/* 0명이 함께 하고 있어요 라는 말은 어색하기 때문에, 혼자일때, 2명 이상일때로 쪼개야 함 */}
                           {
                             posts.participant && posts.participant.length > 1
-                              ? `외 ${
-                                  posts.participant.length - 1
-                                }명이 함께하고 있어요`
+                              ? `외 ${posts.participant.length - 1
+                              }명이 함께하고 있어요`
                               : posts.participant &&
                                 posts.participant.length === 1
-                              ? "님이 참여중이에요"
-                              : "아직 아무도 참여하지 않았어요" /* 사실상 0명이 참여할 일은 없음 */
+                                ? "님이 참여중이에요"
+                                : "아직 아무도 참여하지 않았어요" /* 사실상 0명이 참여할 일은 없음 */
                           }
                         </OtherText>
                       </>
@@ -693,8 +692,8 @@ function GonguViewPage() {
                   <PriceText>
                     {posts.price && posts.finalnum
                       ? Math.floor(
-                          posts.price / posts.finalnum
-                        ).toLocaleString()
+                        posts.price / posts.finalnum
+                      ).toLocaleString()
                       : posts.price?.toLocaleString()}
                     원
                   </PriceText>
@@ -715,7 +714,7 @@ function GonguViewPage() {
                 >
                   {/* {posts.participant === "이영재" ? "참여완료" : "참여하기"} */}
                   {(posts.participant ?? []).includes("공구킹 영재_123456") ||
-                  posts.owner === "공구킹 영재_123456"
+                    posts.owner === "공구킹 영재_123456"
                     ? "참여완료"
                     : "참여하기"}
                   {/* firebase DB에서 participant array 내에 공구킹 영재_123456가 있다면 참여 완료 상태로. */}

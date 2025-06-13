@@ -123,7 +123,7 @@ function GonguStatePage() {
   return (
     <StyledGonguStatePage>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       <TitleHeader state="Title" title="공구 현황" />
       {/* 탭네비 */}
@@ -149,7 +149,7 @@ function GonguStatePage() {
             <EmptyLink onClick={() => navigate("/gongu/new")}>
               <p>새로운 공구 올리기</p>
               <span>
-                <img src="/arrow-right-blue.svg" alt=">" />
+                <img src={import.meta.env.BASE_URL + "/arrow-right-blue.svg"} alt=">" />
               </span>
             </EmptyLink>
           </EmptyState>

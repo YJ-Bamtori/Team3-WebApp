@@ -3,15 +3,15 @@ import styled from "styled-components";
 import BaseBottomSheet from "./BaseBottomSheet";
 
 const categories = [
-  { name: "생수", icon: "/category_icons/water.svg" },
-  { name: "생필품", icon: "/category_icons/cleaning.svg" },
-  { name: "식품", icon: "/category_icons/food.svg" },
-  { name: "의류/학잠", icon: "/category_icons/clothes.svg" },
-  { name: "도서", icon: "/category_icons/book.svg" },
-  { name: "문구", icon: "/category_icons/stationery.svg" },
-  { name: "건강약품", icon: "/category_icons/health.svg" },
-  { name: "뷰티", icon: "/category_icons/beauty.svg" },
-  { name: "기타", icon: "/category_icons/etc.svg" },
+  { name: "생수", icon: import.meta.env.BASE_URL + "/category_icons/water.svg" },
+  { name: "생필품", icon: import.meta.env.BASE_URL + "/category_icons/cleaning.svg" },
+  { name: "식품", icon: import.meta.env.BASE_URL + "/category_icons/food.svg" },
+  { name: "의류/학잠", icon: import.meta.env.BASE_URL + "/category_icons/clothes.svg" },
+  { name: "도서", icon: import.meta.env.BASE_URL + "/category_icons/book.svg" },
+  { name: "문구", icon: import.meta.env.BASE_URL + "/category_icons/stationery.svg" },
+  { name: "건강약품", icon: import.meta.env.BASE_URL + "/category_icons/health.svg" },
+  { name: "뷰티", icon: import.meta.env.BASE_URL + "/category_icons/beauty.svg" },
+  { name: "기타", icon: import.meta.env.BASE_URL + "/category_icons/etc.svg" },
 ];
 
 const Grid = styled.div`

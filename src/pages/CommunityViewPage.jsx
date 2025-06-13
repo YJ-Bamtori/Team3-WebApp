@@ -229,7 +229,7 @@ function CommunityViewPage() {
   return (
     <DashboardContainer>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       <TitleHeader state="IconActionBar" onClick={handleBack} />
 

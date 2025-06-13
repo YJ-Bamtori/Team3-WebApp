@@ -182,12 +182,12 @@ function CalendarBottomSheet({ onSelectDate, onClose }) {
         formatDay={(locale, date) => String(date.getDate())}
         nextLabel={
           <ArrowWrapper>
-            <img src="/arrow-right.svg" alt="다음 달" />
+            <img src={import.meta.env.BASE_URL + "/arrow-right.svg"} alt="다음 달" />
           </ArrowWrapper>
         }
         prevLabel={
           <ArrowWrapper>
-            <img src="/arrow-left.svg" alt="이전 달" />
+            <img src={import.meta.env.BASE_URL + "/arrow-left.svg"} alt="이전 달" />
           </ArrowWrapper>
         }
         next2Label={null}

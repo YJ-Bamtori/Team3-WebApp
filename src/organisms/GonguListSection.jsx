@@ -141,7 +141,7 @@ const GonguListSection = ({ filter = {}, gonguList = [] }) => {
           <EmptyLink onClick={() => navigate("/gongu/new")}>
             <p>새로운 공구 올리기</p>
             <span>
-              <img src="/arrow-right-blue.svg" alt=">" />
+              <img src={import.meta.env.BASE_URL + "/arrow-right-blue.svg"} alt=">" />
             </span>
           </EmptyLink>
         </EmptyState>

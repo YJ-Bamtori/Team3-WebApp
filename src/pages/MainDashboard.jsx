@@ -64,13 +64,13 @@ const MainDashboard = () => {
     <DashboardContainer>
       {/* StatusBar */}
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       {/* 헤더 */}
       <TitleHeader
         state="Title"
-        title={<img src="/Logo.svg" alt="logo" />}
-        rightIcon={<img src="/alert.svg" alt="alert" />}
+        title={<img src={import.meta.env.BASE_URL + "/Logo.svg"} alt="logo" />}
+        rightIcon={<img src={import.meta.env.BASE_URL + "/alert.svg"} alt="alert" />}
       />
       <HighGroup>
         <Dashboard>

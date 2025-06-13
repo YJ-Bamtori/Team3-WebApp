@@ -74,12 +74,12 @@ function CommunityPage() {
   return (
     <PageWrapper>
       <StatusBar>
-        <img src="/StatusBar.png" alt="StatusBar"></img>
+        <img src={import.meta.env.BASE_URL + "/StatusBar.png"} alt="StatusBar"></img>
       </StatusBar>
       <TitleHeader
         state="Title"
         title="커뮤니티"
-        rightIcon={<img src="/search.svg" alt="search" />}
+        rightIcon={<img src={import.meta.env.BASE_URL + "/search.svg"} alt="search" />}
       />
       {/* 탭네비 */}
       <TabNavigation
@@ -105,7 +105,7 @@ function CommunityPage() {
       )}
 
       <FloatingButton onClick={() => navigate("/selectGongu")}>
-        <img src="/plus.svg" alt="" />
+        <img src={import.meta.env.BASE_URL + "/plus.svg"} alt="" />
       </FloatingButton>
       <BottomNav />
     </PageWrapper>
