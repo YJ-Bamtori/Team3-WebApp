@@ -13,6 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter basename="/Team3-WebApp">
     <Routes>
+      <Route index element={<MainDashboard />} />
       <Route path="/" element={<MainDashboard />} />
       <Route path="/gongu" element={<GonguListPage />} />
       <Route path="/gongu/new" element={<GonguWrite />} />
