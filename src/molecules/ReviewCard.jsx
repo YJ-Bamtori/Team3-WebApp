@@ -172,7 +172,7 @@ const CommentCard = ({
             <TitleRow>
               <Title>{title}</Title>
               <ExpandIcon>
-                <img src="/arrow-right-20px.svg" alt="" />
+                <img src={import.meta.env.BASE_URL + "/arrow-right-20px.svg"} alt="" />
               </ExpandIcon>
             </TitleRow>
           </HeaderTop>

@@ -74,7 +74,7 @@ const CommunitySection = () => {
           id: doc.id,
           ...doc.data(),
         }))
-        .sort((a, b) => (b.date ?? 0) - (a.date ?? 0)); // 최신순 정렬
+          .sort((a, b) => (b.date ?? 0) - (a.date ?? 0)); // 최신순 정렬
 
         setData(commentsData);
       } catch (error) {
@@ -92,7 +92,7 @@ const CommunitySection = () => {
         <ViewAll onClick={() => navigate("/community")}>
           <p>전체보기</p>
           <span>
-            <img src="/arrow-right-16px.svg" alt="" />
+            <img src={import.meta.env.BASE_URL + "/arrow-right-16px.svg"} alt="" />
           </span>
         </ViewAll>
       </SectionHeader>

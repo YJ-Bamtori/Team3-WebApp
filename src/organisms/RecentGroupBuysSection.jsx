@@ -95,7 +95,7 @@ const RecentGroupBuysSection = () => {
         <ViewAll onClick={() => navigate("/gongu", { state: { posts } })}>
           <p>전체보기</p>
           <span>
-            <img src="/arrow-right-16px.svg" alt="" />
+            <img src={import.meta.env.BASE_URL + "/arrow-right-16px.svg"} alt="" />
           </span>
         </ViewAll>
       </Header>
