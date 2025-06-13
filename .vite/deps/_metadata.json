@@ -1,0 +1,73 @@
+{
+  "hash": "5707e061",
+  "configHash": "d9f91d35",
+  "lockfileHash": "09b7e461",
+  "browserHash": "20ad712a",
+  "optimized": {
+    "firebase/app": {
+      "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "a537ff84",
+      "needsInterop": false
+    },
+    "firebase/auth": {
+      "src": "../../node_modules/firebase/auth/dist/esm/index.esm.js",
+      "file": "firebase_auth.js",
+      "fileHash": "649bd342",
+      "needsInterop": false
+    },
+    "firebase/firestore": {
+      "src": "../../node_modules/firebase/firestore/dist/esm/index.esm.js",
+      "file": "firebase_firestore.js",
+      "fileHash": "f789bd3d",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "4c25764a",
+      "needsInterop": true
+    },
+    "react-calendar": {
+      "src": "../../node_modules/react-calendar/dist/index.js",
+      "file": "react-calendar.js",
+      "fileHash": "301b5484",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "08cd70b6",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "12bf8d6f",
+      "needsInterop": false
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "13c19eba",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-6AKFUMRQ": {
+      "file": "chunk-6AKFUMRQ.js"
+    },
+    "chunk-7Q6A3SXU": {
+      "file": "chunk-7Q6A3SXU.js"
+    },
+    "chunk-XQIPT53K": {
+      "file": "chunk-XQIPT53K.js"
+    },
+    "chunk-KS2M7ZJI": {
+      "file": "chunk-KS2M7ZJI.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}
