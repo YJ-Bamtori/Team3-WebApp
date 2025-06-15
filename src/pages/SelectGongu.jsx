@@ -164,18 +164,21 @@ const SelectGongu = (props) => {
         }));
 
         // isReviewed가 false인 데이터만 필터링
-        const unreviewedList = allData.filter(
-          (item) => item.isReviewed === false
-        );
+        const now = Date.now();
 
-        const particpantsCompletedArray = unreviewedList.filter(
+        const filtered = allData.filter(
           (item) =>
-            item.participant && item.participant.length === item.finalnum
+            item.isReviewed === false &&
+            item.deadline &&
+            new Date(item.deadline).getTime() < now &&
+            Array.isArray(item.participant) &&
+            item.participant.includes("공구킹 영재_123456")
         );
-        setData(particpantsCompletedArray);
 
-        console.log("공동구매 참여 완료된 데이터:", unreviewedList);
-        console.log("공동구매 참여 완료 + 인원 꽉:", particpantsCompletedArray);
+        setData(filtered);
+
+        console.log("리뷰 대상 조건 충족 항목:", filtered);
+
         // 추후 이 데이터를 사용하여 참여 완료된 공동구매에 대한 리뷰 작성 페이지로 이동할 수 있음
       } catch (error) {
         console.error("공동구매 데이터 불러오기 실패:", error);
