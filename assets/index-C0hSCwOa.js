@@ -4955,6 +4955,9 @@ ${e}`,sk=Object.getOwnPropertyDescriptor(Function.prototype,"toString"),ok=Objec
   font-family: "Pretendard", -apple-system, Roboto, Helvetica, sans-serif;
   background-color: #f9f9f9;
   height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 `,eM=I.div`
   padding: 16px 20px;
   display: flex;
