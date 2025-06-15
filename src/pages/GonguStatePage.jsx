@@ -115,7 +115,7 @@ function GonguStatePage() {
         // db에 participant에 이영재_123456이 있으면 참여중
         const isParticipant =
           Array.isArray(data.participant) &&
-          data.participant.includes("이영재_123456");
+          data.participant.includes("공구킹 영재_123456");
         if (isParticipant) {
           list.push({ id: doc.id, ...data, isDone });
         }

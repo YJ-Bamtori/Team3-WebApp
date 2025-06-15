@@ -521,7 +521,24 @@ function GonguViewPage() {
     console.log("링크 버튼 눌렸음!");
     // 디버깅 로그 필요
   };
+  let isExpired = false;
+  let isParticipated = false;
+  let isOwner = false;
+  let isDisabled = false;
+  let buttonLabel = "참여하기";
 
+  if (posts) {
+    isExpired = posts.deadline && new Date(posts.deadline).getTime() < Date.now();
+    isParticipated = (posts.participant ?? []).includes("공구킹 영재_123456");
+    isOwner = posts.owner === "공구킹 영재_123456";
+    isDisabled = isExpired || isParticipated || isOwner;
+
+    buttonLabel = isExpired
+      ? "마감됨"
+      : isParticipated || isOwner
+        ? "참여완료"
+        : "참여하기";
+  }
   return (
     <DashboardContainer>
       <StatusBar>
@@ -700,24 +717,11 @@ function GonguViewPage() {
                   <NumText>/인</NumText>
                 </PriceContainer>
                 <ReplyBtn
-                  onClick={handleClick}
-                  // disabledStyle={posts.participant === "이영재"}
-                  // disabled={posts.participant === "이영재"}
-                  $disabledstyle={
-                    (posts.participant ?? []).includes("공구킹 영재_123456") ||
-                    posts.owner === "공구킹 영재_123456"
-                  }
-                  disabled={
-                    (posts.participant ?? []).includes("공구킹 영재_123456") ||
-                    posts.owner === "공구킹 영재_123456" // 현재 로그인 한 사용자의 가상 이름
-                  }
+                  onClick={isDisabled ? undefined : handleClick}
+                  $disabledstyle={isDisabled}
+                  disabled={isDisabled}
                 >
-                  {/* {posts.participant === "이영재" ? "참여완료" : "참여하기"} */}
-                  {(posts.participant ?? []).includes("공구킹 영재_123456") ||
-                    posts.owner === "공구킹 영재_123456"
-                    ? "참여완료"
-                    : "참여하기"}
-                  {/* firebase DB에서 participant array 내에 공구킹 영재_123456가 있다면 참여 완료 상태로. */}
+                  {buttonLabel}
                 </ReplyBtn>
               </AlignContainer>
             </BottomContainer>
