@@ -112,7 +112,13 @@ function GonguStatePage() {
           participantCount >= data.finalnum ||
           deadlineDate.setHours(0, 0, 0, 0) < now.setHours(0, 0, 0, 0);
 
-        list.push({ id: doc.id, ...data, isDone });
+        // db에 participant에 이영재_123456이 있으면 참여중
+        const isParticipant =
+          Array.isArray(data.participant) &&
+          data.participant.includes("이영재_123456");
+        if (isParticipant) {
+          list.push({ id: doc.id, ...data, isDone });
+        }
       });
 
       setGonguStateList(list);
