@@ -550,7 +550,6 @@ function GonguViewPage() {
         <>
           <ImageWrapper>
             <ImageContainer ref={imageContainerRef} onScroll={handleScroll}>
-              /* images 데이터 */
               {posts.images &&
                 posts.images.map((src, index) => (
                   <ImageSlide key={index} src={src} alt={`이미지${index}번`} />
